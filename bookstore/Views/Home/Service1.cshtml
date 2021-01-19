@@ -1,0 +1,29 @@
+﻿@model bookstore.Models.service
+@{
+    ViewBag.Title = "Service1";
+}
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <img src="~/images/math.jpg" class="w-100"/>
+        </div>
+        <div class="col-md-6">
+            <h2 class="title2">算術入門</h2>
+            <p> 謹慎地來說，我們必須考慮到所有可能。儘管算數看似不顯眼，卻佔據了我的腦海。穆勒深信，個人的自由必須有所限度，不得因為自己的而妨礙他人。這句話幾乎解讀出了問題的根本。算數可以說是有著成為常識的趨勢。在這種困難的抉擇下，本人思來想去，寢食難安。張弘說過，婚姻不是1+1=2，而是0。5+0。5=1。即：兩個人各削去自己的個性和缺點，然後湊合在一起。強烈建議大家把這段話牢牢記住。對於一般人來說，算數究竟象徵著什麼呢？如果仔細思考算數，會發現其中蘊含的深遠意義。</p>
+            <h2 class="title2">我有興趣</h2>
+            <form method="post">
+                <label class="form-label" for="name">姓名</label>
+                <input class="form-control" id="name" name="name" required/>
+                <label class="form-label" for="phone">聯絡電話</label>
+                <input class="form-control" id="phone" name="phone" required/>
+                <label class="form-label" for="email">信箱</label>
+                <input class="form-control" id="email" name="email" type="email" required/>
+                <input id="no" name="no" value="1" hidden/>
+                <button class="btn btn-primary mt-3" type="submit">送出</button>
+            </form>
+        </div>
+
+
+    </div>
+</div>

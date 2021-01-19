@@ -1,0 +1,33 @@
+﻿@model bookstore.Models.users
+@{
+    ViewBag.Title = "usersmod";
+    Layout = "~/Views/Shared/_Layoutamdin.cshtml";
+}
+
+<div class="container">
+    <form method="post">
+        <input value="@Model.Id" hidden id="id" name="id"/>
+        <label for="user">帳號</label>
+        <input class="form-control" id="user" name="user" required value="@Model.user" disabled/>
+        <label for="password">密碼</label>
+        <input class="form-control" id="password" name="password" required value="@Model.password" />
+        <label for="name">姓名</label>
+        <input class="form-control" id="name" name="name" required value="@Model.name" />
+
+        <button class="btn btn-primary my-3" type="submit">修改</button>
+
+    </form>
+
+    @if (ViewBag.msg != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @ViewBag.msg
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    }
+
+    <a class="btn btn-primary my-3" href="/home/userslist">回列表</a>
+
+</div>
+

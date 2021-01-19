@@ -1,0 +1,48 @@
+﻿@model IEnumerable<bookstore.Models.service>
+@{
+    ViewBag.Title = "servicelist";
+    Layout = "~/Views/Shared/_Layoutamdin.cshtml";
+}
+
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>聯絡電話</th>
+                <th>信箱</th>
+                <th>類型</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                
+                <tr>
+                    <td>@item.name</td>
+                    <td>@item.phone</td>
+                    <td>@item.email</td>
+                    @if(item.no == 1)
+                    {
+                        <td>算術入門</td>
+                    }else if(item.no == 2)
+                    {
+                        <td>開心學英語</td>
+                    }else if(item.no == 3)
+                    {
+                        <td>體育訓練</td>
+                    }
+
+                    <td>@Html.ActionLink("刪除", "servicedel", new { id = item.Id })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+    <a class="btn btn-primary" href="/home/admin">回後台</a>
+
+</div>

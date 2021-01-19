@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大才全幼稚園</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        .title2 {
+            padding-left: 5px;
+            margin-top: 10px;
+            border-left-style: solid;
+            border-left-color: mediumturquoise;
+            border-left-width: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="/home/index"><img src="~/images/logo.png" style="width: 40px;"/> 大才全幼稚園</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>                
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link @ViewBag.pageI" aria-current="page" href="/home/index">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @ViewBag.pageA" href="/home/about">關於我們</a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle @ViewBag.pageS" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            教學內容
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/home/service1">算數入門</a></li>
+                            <li><a class="dropdown-item" href="/home/service2">開心學英語</a></li>
+                            <li><a class="dropdown-item" href="/home/service3">體能訓練</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/home/service4">教室概覽</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link @ViewBag.pageC" href="/home/contact">連絡我們</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="btn btn-outline-success" href="/home/login">登入</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+    <hr />
+
+    <footer class="container">
+        <p>&copy; @DateTime.Now.Year - 大才全幼稚園 版權所有</p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大才全幼稚園-後台</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        .title2 {
+            padding-left: 5px;
+            margin-top: 10px;
+            border-left-style: solid;
+            border-left-color: mediumturquoise;
+            border-left-width: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="/home/admin"><img src="~/images/logo.png" style="width: 40px;" /> 大才全幼稚園-後台</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>                
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/home/admin">後台主頁</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    @if (Session["user"] != null)
+                    {
+                        <a class="btn btn-outline-success mx-2" href="/home/logout">登出</a>
+                    }
+
+                    <a class="btn btn-outline-success" href="/home/index">回首頁</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+    <hr />
+
+    <footer class="container">
+        <p>&copy; @DateTime.Now.Year - 大才全幼稚園 版權所有</p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

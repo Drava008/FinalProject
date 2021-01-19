@@ -1,0 +1,38 @@
+﻿@model IEnumerable<bookstore.Models.users>
+@{
+    ViewBag.Title = "userslist";
+    Layout = "~/Views/Shared/_Layoutamdin.cshtml";
+}
+
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>帳號</th>
+                <th>密碼</th>
+                <th>姓名</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.user</td>
+                    <td>@item.password</td>
+                    <td>@item.name</td>
+                    <td>@Html.ActionLink("修改", "usersmod", new { id = item.Id })</td>
+                    <td>@Html.ActionLink("刪除", "usersdel", new { id = item.Id })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+    <a class="btn btn-primary" href="/home/usersadd">新增帳號</a>
+    <a class="btn btn-primary" href="/home/admin">回後台</a>
+
+</div>

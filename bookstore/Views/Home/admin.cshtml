@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "admin";
+    Layout = "~/Views/Shared/_Layoutamdin.cshtml";
+}
+
+<div class="container">
+        
+    <p>@Session["user"]  你好</p>
+
+    <div class="mt-3">
+        <a class="btn btn-primary" href="/home/userslist">帳號管理</a>
+        <a class="btn btn-primary" href="/home/servicelist">服務回應<span class="badge bg-dark">@ViewBag.service</span></a>
+        <a class="btn btn-primary" href="/home/contactlist">聯絡回應<span class="badge bg-dark">@ViewBag.contact</span></a>
+    </div>
+
+    
+
+
+</div>

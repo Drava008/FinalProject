@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/sport.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/abc.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/math.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+
+<div class="container">
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/images/math.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">算術入門</h3>
+                    <p class="card-text">我們必須相信，通過反向歸納，我們可以使用最佳策略來分析算術的引入。 為謹慎起見，我們必須考慮所有可能性。 馬丁說的一句話值得深思。 沒有觸發任何行動的思想不是思想，而是夢想。 我認為您已經弄清了線索。</p>
+                </div>
+                <a class="card-footer text-end btn" href="/home/service1">
+                    <small class="text-muted">更多資訊>></small>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/images/abc.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">開心學英語</h3>
+                    <p class="card-text">我們都有一個共識，即如果這個問題很困難，那注定是很難解決的。 所謂快樂學習英語，關鍵是如何詮釋快樂學習英語。</p>
+                </div>
+                <a class="card-footer btn text-end" href="/home/service2">
+                    <small class="text-muted">更多資訊>></small>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="~/images/sport.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">體能訓練</h3>
+                    <p class="card-text">在人類歷史上，我們一直竭盡全力去理解體育鍛煉。 世界需要改革和對體育鍛煉的新認識。 左有句經典話說，他在不怪別人的情況下自我修復。 這句話反映出問題的緊迫性。</p>
+                </div>
+                <a class="card-footer btn text-end" href="/home/service3">
+                    <small class="text-muted">更多資訊>></small>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-7" id="book4">
+            <h2 class="title2">教室概覽</h2>
+            <p class="lead">課堂概述似乎是一個巧合，但如果我們從更大的角度看待這個問題，這似乎是一個不可避免的事實。 博蒙特和弗萊徹曾經說過，過時的風格通常沒有新穎性，也沒有人會模仿它們。 但是，我們知道20年前流行的樣式會再次受到人們的喜愛。 這句話幾乎解釋了問題的根源。</p>
+            <p>該問題的關鍵可能看起來不清楚，但是您必須頭腦清楚。 這些並不完全重要。 更為重要的問題是，課堂概述對我來說非常重要，必須認真對待。 這必須是一個前衛和大膽的想法。 需要考慮詳細的課堂概述和對策的影響。</p>
+            <a href="/home/service4" class="btn btn-primary float-end">更多資訊>></a>
+
+        </div>
+        <div class="col-md-5">
+            <a href="/home/service4"><img src="~/images/class1.jpg" class="w-100" alt=""></a>
+        </div>
+
+    </div>
+
+</div>
